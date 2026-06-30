@@ -1,0 +1,48 @@
+.header {
+  border: 1px solid #000;
+  justify-content: space-between;
+  display: flex;
+}
+
+.logo {
+  width: 150px;
+}
+
+.nav-items > ul {
+  padding: 15px 20px;
+  font-size: 20px;
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-items > ul > li {
+  margin: 10px;
+  padding: 10px;
+}
+
+.res-card {
+  width: 200px;
+  height: 320px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.res-card:hover {
+  cursor: pointer;
+  background-color: #dad5d5;
+  border: 1px solid #000;
+}
+
+.res-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.search {
+  padding: 10px;
+}
+
+.res-logo {
+  width: 100%;
+}
+/*# sourceMappingURL=Food-ordering-App.aa436662.css.map */

@@ -1,0 +1,42 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.logo{
+    width: 150px;
+}
+.nav-items > ul{
+    display: flex;
+    list-style-type: none;
+    padding: 15px 20px;
+    font-size: 20px;
+
+}
+.nav-items > ul > li{
+    margin: 10px;
+    padding: 10px;
+
+}
+.res-card{
+    width: 200px;
+    height: 320px;
+    padding: 5px;
+    margin: 5px;
+}
+.res-card:hover{
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: rgb(218, 213, 213);
+
+}
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.search{
+    padding: 10px;
+}
+.res-logo{
+    width: 100%;
+}

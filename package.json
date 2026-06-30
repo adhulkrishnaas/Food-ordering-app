@@ -1,0 +1,19 @@
+{
+  "name": "food-ordering-app",
+  "version": "1.0.0",
+  "description": "This is a food ordering app by Adhul.",
+  "scripts": {
+    "start": "parcel index.html --no-cache",
+    "build": "parcel build index.html --no-cache",
+    "test": "jest"
+  },
+  "author": "Adhul",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  }
+}
