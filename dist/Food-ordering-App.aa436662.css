@@ -21,8 +21,10 @@
 }
 
 .res-card {
+  background-color: #fbebeb;
+  border: 1px solid #e5ec8a;
   width: 200px;
-  height: 320px;
+  height: 450px;
   margin: 5px;
   padding: 5px;
 }
@@ -45,4 +47,4 @@
 .res-logo {
   width: 100%;
 }
-/*# sourceMappingURL=Food-ordering-App.aa436662.css.map */
+/*# sourceMappingURL=Food-ordering-app.aa436662.css.map */

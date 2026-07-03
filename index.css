@@ -20,9 +20,13 @@
 }
 .res-card{
     width: 200px;
-    height: 320px;
+    height: 450px;
     padding: 5px;
     margin: 5px;
+    background-color: rgb(251, 235, 235);
+    border: 1px solid rgb(229, 236, 138);
+
+
 }
 .res-card:hover{
     border: 1px solid black;
