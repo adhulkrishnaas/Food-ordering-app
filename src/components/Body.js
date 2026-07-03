@@ -1,27 +1,4 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://img.magnific.com/premium-vector/burger-logo_1274599-3956.jpg?semt=ais_hybrid&w=740&q=80"
-        ></img>
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
+import RestaurantCard from "./RestrauntCard";
 const resList = [
   {
     card: {
@@ -689,7 +666,6 @@ const resList = [
     },
   },
 ];
-
 const Body = () => {
   return (
     <div className="body">
@@ -705,37 +681,4 @@ const Body = () => {
     </div>
   );
 };
-
-const RestaurantCard = (props) => {
-  const { resData } = props;
-  const { cloudinaryImageId, name, cuisines, deliveryTime, avgRating } =
-    resData?.card?.card?.info;
-  return (
-    <div className="res-card">
-      <img
-        className="res-logo"
-        alt="res-logo"
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/" +
-          cloudinaryImageId
-        }
-      />
-      <h3>{name}</h3>
-      <h4>{cuisines.join(", ")}</h4>
-      <h4>{"Rating: " + avgRating}</h4>
-      <h4>{resData.card.card.info.sla.deliveryTime + "minutes"}</h4>
-    </div>
-  );
-};
-
-const AppLayout = () => {
-  return (
-    <div className="app-layout">
-      <Header />
-      <Body />
-    </div>
-  );
-};
-
-const root = createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+export default Body;
