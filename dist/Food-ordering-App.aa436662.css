@@ -47,4 +47,11 @@
 .res-logo {
   width: 100%;
 }
+
+.filter-btn {
+  cursor: pointer;
+  background-color: #faebd7;
+  margin: 10px;
+  padding: 10px;
+}
 /*# sourceMappingURL=Food-ordering-app.aa436662.css.map */

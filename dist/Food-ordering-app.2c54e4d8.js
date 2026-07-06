@@ -20498,39 +20498,55 @@ var _restrauntCard = require("./RestrauntCard");
 var _restrauntCardDefault = parcelHelpers.interopDefault(_restrauntCard);
 var _mockData = require("../../utils/mockData");
 var _mockDataDefault = parcelHelpers.interopDefault(_mockData);
+var _react = require("react");
+var _s = $RefreshSig$();
 const Body = ()=>{
+    _s();
+    let [restrauntLists, setRestrauntLists] = (0, _react.useState)((0, _mockDataDefault.default));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "search",
-                children: "Search"
+                className: "filter",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    className: "filter-btn",
+                    onClick: ()=>{
+                        setRestrauntLists((0, _mockDataDefault.default).filter((res)=>res.card.card.info.avgRating >= 4));
+                        console.log(restrauntLists);
+                    },
+                    children: "Top Rated Restraunts"
+                }, void 0, false, {
+                    fileName: "src/components/Body.js",
+                    lineNumber: 11,
+                    columnNumber: 9
+                }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 6,
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "res-container",
-                children: (0, _mockDataDefault.default).map((restraunt)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restrauntCardDefault.default), {
+                children: restrauntLists.map((restraunt)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restrauntCardDefault.default), {
                         resData: restraunt
                     }, restraunt.card.card.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 9,
+                        lineNumber: 25,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 7,
+                lineNumber: 23,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 5,
+        lineNumber: 9,
         columnNumber: 5
     }, undefined);
 };
+_s(Body, "svTlL3QcHjXXTvs0GluuInda688=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -20541,7 +20557,7 @@ $RefreshReg$(_c, "Body");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","./RestrauntCard":"wLNNc","../../utils/mockData":"grSw8","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"wLNNc":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","./RestrauntCard":"wLNNc","../../utils/mockData":"grSw8","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U"}],"wLNNc":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$1b1f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$1b1f.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -20745,7 +20761,7 @@ const resList = [
                         "Chinese",
                         "North Indian"
                     ],
-                    avgRating: 4.2,
+                    avgRating: 3.8,
                     parentId: "641506",
                     avgRatingString: "4.2",
                     totalRatingsString: "7.3K+",
@@ -20953,7 +20969,7 @@ const resList = [
                         "North Indian",
                         "Combos"
                     ],
-                    avgRating: 4.2,
+                    avgRating: 3.7,
                     parentId: "616357",
                     avgRatingString: "4.2",
                     totalRatingsString: "416",
@@ -21045,7 +21061,7 @@ const resList = [
                         "Indian",
                         "South Indian"
                     ],
-                    avgRating: 4.4,
+                    avgRating: 3.5,
                     parentId: "21400",
                     avgRatingString: "4.4",
                     totalRatingsString: "7.9K+",
