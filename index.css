@@ -51,3 +51,14 @@
     background-color: antiquewhite;
     
 }
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.shimmer-card{
+    width: 200px;
+    height: 400px;
+    margin:20px;
+    background-color: rgb(189, 185, 185);
+}

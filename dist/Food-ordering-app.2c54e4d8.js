@@ -733,676 +733,24 @@ var _body = require("./components/Body");
 var _bodyDefault = parcelHelpers.interopDefault(_body);
 var _restrauntCard = require("./components/RestrauntCard");
 var _restrauntCardDefault = parcelHelpers.interopDefault(_restrauntCard);
-const resList = [
-    {
-        card: {
-            card: {
-                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-                info: {
-                    id: "1208881",
-                    name: "Thirtha",
-                    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/9/27/b4cf8af1-5763-4919-bca2-cd99c5e75057_1208881 (1).jpg",
-                    locality: "Central banglore ",
-                    areaName: "Central Bangalore",
-                    costForTwo: "\u20B9350 for two",
-                    cuisines: [
-                        "North Indian",
-                        "South Indian",
-                        "Chinese",
-                        "Snacks",
-                        "Desserts",
-                        "Beverages"
-                    ],
-                    avgRating: 4.6,
-                    veg: true,
-                    parentId: "691336",
-                    avgRatingString: "4.6",
-                    totalRatingsString: "1.1K+",
-                    sla: {
-                        deliveryTime: 36,
-                        lastMileTravel: 2.4,
-                        serviceability: "SERVICEABLE",
-                        slaString: "35-40 mins",
-                        lastMileTravelString: "2.4 km",
-                        iconType: "ICON_TYPE_EMPTY"
-                    },
-                    availability: {
-                        nextCloseTime: "2026-07-03 23:59:00",
-                        opened: true
-                    },
-                    badges: {
-                        imageBadges: [
-                            {
-                                imageId: "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
-                                description: "Exclusively available on Swiggy \u2014 you won't find it elsewhere."
-                            }
-                        ]
-                    },
-                    isOpen: true,
-                    type: "F",
-                    badgesV2: {
-                        entityBadges: {
-                            textBased: {},
-                            imageBased: {
-                                badgeObject: [
-                                    {
-                                        attributes: {
-                                            imageId: "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
-                                            description: "Exclusively available on Swiggy \u2014 you won't find it elsewhere.",
-                                            theme: ""
-                                        }
-                                    }
-                                ]
-                            },
-                            textExtendedBadges: {}
-                        }
-                    },
-                    aggregatedDiscountInfoV3: {
-                        header: "ITEMS",
-                        subHeader: "AT \u20B970",
-                        logoCtx: {
-                            text: "BENEFITS"
-                        }
-                    },
-                    orderabilityCommunication: {
-                        title: {},
-                        subTitle: {},
-                        message: {},
-                        customIcon: {},
-                        commsStyling: {}
-                    },
-                    differentiatedUi: {
-                        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                        differentiatedUiMediaDetails: {
-                            mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                            lottie: {},
-                            video: {}
-                        }
-                    },
-                    reviewsSummary: {},
-                    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-                    restaurantOfferPresentationInfo: {},
-                    externalRatings: {
-                        aggregatedRating: {
-                            rating: "--"
-                        }
-                    },
-                    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-                    priceComparisonComms: {}
-                },
-                analytics: {},
-                cta: {
-                    link: "swiggy://menu?restaurant_id=1208881&source=collection&query=South%20Indian",
-                    text: "RESTAURANT_MENU",
-                    type: "DEEPLINK"
-                },
-                widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-            },
-            relevance: {
-                type: "RELEVANCE_TYPE_ON_MENU_RETURN",
-                sectionId: "MENU_RETURN_FOOD"
-            }
-        }
-    },
-    {
-        card: {
-            card: {
-                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-                info: {
-                    id: "385112",
-                    name: "Dindigul Thalappakatti - Since 1957\n",
-                    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/9/21/10abae92-cccd-4689-a426-7d862027d0ac_385112.JPG",
-                    locality: "New BEL Road",
-                    areaName: "New BEL Road",
-                    costForTwo: "\u20B9500 for two",
-                    cuisines: [
-                        "Biryani",
-                        "Barbecue",
-                        "South Indian",
-                        "Chinese",
-                        "North Indian"
-                    ],
-                    avgRating: 4.2,
-                    parentId: "641506",
-                    avgRatingString: "4.2",
-                    totalRatingsString: "7.3K+",
-                    promoted: true,
-                    adTrackingId: "cid=6b4e77ce-aa02-4cee-9674-1a499ae07169~p=2~adgrpid=6b4e77ce-aa02-4cee-9674-1a499ae07169#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=385112~plpr=COLLECTION~eid=585535f3-20b6-4972-ab18-d9be0b431f12~srvts=1783078272370~collid=83634",
-                    sla: {
-                        deliveryTime: 41,
-                        lastMileTravel: 4.8,
-                        serviceability: "SERVICEABLE",
-                        slaString: "40-45 mins",
-                        lastMileTravelString: "4.8 km",
-                        iconType: "ICON_TYPE_EMPTY"
-                    },
-                    availability: {
-                        nextCloseTime: "2026-07-03 23:59:00",
-                        opened: true
-                    },
-                    badges: {},
-                    isOpen: true,
-                    type: "F",
-                    badgesV2: {
-                        entityBadges: {
-                            imageBased: {},
-                            textExtendedBadges: {},
-                            textBased: {}
-                        }
-                    },
-                    aggregatedDiscountInfoV3: {
-                        header: "70% OFF",
-                        subHeader: "UPTO \u20B9140",
-                        logoCtx: {
-                            text: "BENEFITS"
-                        }
-                    },
-                    orderabilityCommunication: {
-                        title: {},
-                        subTitle: {},
-                        message: {},
-                        customIcon: {},
-                        commsStyling: {}
-                    },
-                    differentiatedUi: {
-                        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                        differentiatedUiMediaDetails: {
-                            mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                            lottie: {},
-                            video: {}
-                        }
-                    },
-                    reviewsSummary: {},
-                    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-                    restaurantOfferPresentationInfo: {},
-                    externalRatings: {
-                        aggregatedRating: {
-                            rating: "4.5",
-                            ratingCount: "4.7K+"
-                        },
-                        source: "GOOGLE",
-                        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag"
-                    },
-                    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-                    campaignId: "6b4e77ce-aa02-4cee-9674-1a499ae07169",
-                    priceComparisonComms: {}
-                },
-                analytics: {},
-                cta: {
-                    link: "swiggy://menu?restaurant_id=385112&source=collection&query=South%20Indian",
-                    text: "RESTAURANT_MENU",
-                    type: "DEEPLINK"
-                },
-                widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-            },
-            relevance: {
-                type: "RELEVANCE_TYPE_ON_MENU_RETURN",
-                sectionId: "MENU_RETURN_FOOD"
-            }
-        }
-    },
-    {
-        card: {
-            card: {
-                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-                info: {
-                    id: "72350",
-                    name: "Vishnu Garden",
-                    cloudinaryImageId: "q1yoajwctcy33cjhregi",
-                    locality: "RT Nagar",
-                    areaName: "Sanjay Nagar, New BEL Road",
-                    costForTwo: "\u20B9251 for two",
-                    cuisines: [
-                        "Chinese",
-                        "South Indian"
-                    ],
-                    avgRating: 4.5,
-                    veg: true,
-                    parentId: "21653",
-                    avgRatingString: "4.5",
-                    totalRatingsString: "25K+",
-                    sla: {
-                        deliveryTime: 32,
-                        lastMileTravel: 3,
-                        serviceability: "SERVICEABLE",
-                        slaString: "30-40 mins",
-                        lastMileTravelString: "3.0 km",
-                        iconType: "ICON_TYPE_EMPTY"
-                    },
-                    availability: {
-                        nextCloseTime: "2026-07-03 22:45:00",
-                        opened: true
-                    },
-                    badges: {
-                        imageBadges: [
-                            {
-                                imageId: "v1695133679/badges/Pure_Veg111.png",
-                                description: "Serves only 100% vegetarian food, with no non-veg items."
-                            }
-                        ]
-                    },
-                    isOpen: true,
-                    type: "F",
-                    badgesV2: {
-                        entityBadges: {
-                            textExtendedBadges: {},
-                            textBased: {},
-                            imageBased: {
-                                badgeObject: [
-                                    {
-                                        attributes: {
-                                            imageId: "v1695133679/badges/Pure_Veg111.png",
-                                            description: "Serves only 100% vegetarian food, with no non-veg items.",
-                                            theme: ""
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    },
-                    aggregatedDiscountInfoV3: {
-                        header: "ITEMS",
-                        subHeader: "AT \u20B939",
-                        logoCtx: {
-                            text: "BENEFITS"
-                        }
-                    },
-                    orderabilityCommunication: {
-                        title: {},
-                        subTitle: {},
-                        message: {},
-                        customIcon: {},
-                        commsStyling: {}
-                    },
-                    differentiatedUi: {
-                        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                        differentiatedUiMediaDetails: {
-                            mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                            lottie: {},
-                            video: {}
-                        }
-                    },
-                    reviewsSummary: {},
-                    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-                    restaurantOfferPresentationInfo: {},
-                    externalRatings: {
-                        aggregatedRating: {
-                            rating: "4.0",
-                            ratingCount: "8.7K+"
-                        },
-                        source: "GOOGLE",
-                        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag"
-                    },
-                    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-                    priceComparisonComms: {}
-                },
-                analytics: {},
-                cta: {
-                    link: "swiggy://menu?restaurant_id=72350&source=collection&query=South%20Indian",
-                    text: "RESTAURANT_MENU",
-                    type: "DEEPLINK"
-                },
-                widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-            },
-            relevance: {
-                type: "RELEVANCE_TYPE_ON_MENU_RETURN",
-                sectionId: "MENU_RETURN_FOOD"
-            }
-        }
-    },
-    {
-        card: {
-            card: {
-                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-                info: {
-                    id: "1061760",
-                    name: "KOMBOZZ by Thalappakatti",
-                    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/3/18/3e6aadfa-57c8-45b6-8a31-fc7950a87a3b_1061760.jpg",
-                    locality: "New Bel Road",
-                    areaName: "New BEL Road, Bangalore",
-                    costForTwo: "\u20B9450 for two",
-                    cuisines: [
-                        "Chinese",
-                        "Biryani",
-                        "Desserts",
-                        "South Indian",
-                        "Beverages",
-                        "North Indian",
-                        "Combos"
-                    ],
-                    avgRating: 4.2,
-                    parentId: "616357",
-                    avgRatingString: "4.2",
-                    totalRatingsString: "416",
-                    promoted: true,
-                    adTrackingId: "cid=7688bf08-d4f7-4347-b57a-477e12814817~p=4~adgrpid=7688bf08-d4f7-4347-b57a-477e12814817#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=1061760~plpr=COLLECTION~eid=fa53d396-41b2-4c64-baac-c18985245af0~srvts=1783078272370~collid=83634",
-                    sla: {
-                        deliveryTime: 40,
-                        lastMileTravel: 4.8,
-                        serviceability: "SERVICEABLE",
-                        slaString: "35-40 mins",
-                        lastMileTravelString: "4.8 km",
-                        iconType: "ICON_TYPE_EMPTY"
-                    },
-                    availability: {
-                        nextCloseTime: "2026-07-03 23:59:00",
-                        opened: true
-                    },
-                    badges: {},
-                    isOpen: true,
-                    type: "F",
-                    badgesV2: {
-                        entityBadges: {
-                            imageBased: {},
-                            textExtendedBadges: {},
-                            textBased: {}
-                        }
-                    },
-                    aggregatedDiscountInfoV3: {
-                        header: "70% OFF",
-                        subHeader: "UPTO \u20B9140",
-                        logoCtx: {
-                            text: "BENEFITS"
-                        }
-                    },
-                    orderabilityCommunication: {
-                        title: {},
-                        subTitle: {},
-                        message: {},
-                        customIcon: {},
-                        commsStyling: {}
-                    },
-                    differentiatedUi: {
-                        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                        differentiatedUiMediaDetails: {
-                            mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                            lottie: {},
-                            video: {}
-                        }
-                    },
-                    reviewsSummary: {},
-                    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-                    restaurantOfferPresentationInfo: {},
-                    externalRatings: {
-                        aggregatedRating: {
-                            rating: "--"
-                        }
-                    },
-                    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-                    campaignId: "7688bf08-d4f7-4347-b57a-477e12814817",
-                    priceComparisonComms: {}
-                },
-                analytics: {},
-                cta: {
-                    link: "swiggy://menu?restaurant_id=1061760&source=collection&query=South%20Indian",
-                    text: "RESTAURANT_MENU",
-                    type: "DEEPLINK"
-                },
-                widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-            },
-            relevance: {
-                type: "RELEVANCE_TYPE_ON_MENU_RETURN",
-                sectionId: "MENU_RETURN_FOOD"
-            }
-        }
-    },
-    {
-        card: {
-            card: {
-                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-                info: {
-                    id: "651231",
-                    name: "Ambur Star Briyani Since 1890",
-                    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/12/f0a2f320-20e5-4798-be9a-3c247279b4d5_651231.jpg",
-                    locality: "Sanjay Nagar, New BEL Road",
-                    areaName: "Sanjay Nagar",
-                    costForTwo: "\u20B9500 for two",
-                    cuisines: [
-                        "Biryani",
-                        "Indian",
-                        "South Indian"
-                    ],
-                    avgRating: 4.4,
-                    parentId: "21400",
-                    avgRatingString: "4.4",
-                    totalRatingsString: "7.9K+",
-                    sla: {
-                        deliveryTime: 34,
-                        lastMileTravel: 3.7,
-                        serviceability: "SERVICEABLE",
-                        slaString: "30-35 mins",
-                        lastMileTravelString: "3.7 km",
-                        iconType: "ICON_TYPE_EMPTY"
-                    },
-                    availability: {
-                        nextCloseTime: "2026-07-04 00:00:00",
-                        opened: true
-                    },
-                    badges: {},
-                    isOpen: true,
-                    type: "F",
-                    badgesV2: {
-                        entityBadges: {
-                            textBased: {},
-                            imageBased: {},
-                            textExtendedBadges: {}
-                        }
-                    },
-                    aggregatedDiscountInfoV3: {
-                        header: "ITEMS",
-                        subHeader: "AT \u20B939",
-                        logoCtx: {
-                            text: "BENEFITS"
-                        }
-                    },
-                    orderabilityCommunication: {
-                        title: {},
-                        subTitle: {},
-                        message: {},
-                        customIcon: {},
-                        commsStyling: {}
-                    },
-                    differentiatedUi: {
-                        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                        differentiatedUiMediaDetails: {
-                            mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                            lottie: {},
-                            video: {}
-                        }
-                    },
-                    reviewsSummary: {},
-                    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-                    restaurantOfferPresentationInfo: {},
-                    externalRatings: {
-                        aggregatedRating: {
-                            rating: "3.9",
-                            ratingCount: "802"
-                        },
-                        source: "GOOGLE",
-                        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag"
-                    },
-                    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-                    priceComparisonComms: {}
-                },
-                analytics: {},
-                cta: {
-                    link: "swiggy://menu?restaurant_id=651231&source=collection&query=South%20Indian",
-                    text: "RESTAURANT_MENU",
-                    type: "DEEPLINK"
-                },
-                widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-            },
-            relevance: {
-                type: "RELEVANCE_TYPE_ON_MENU_RETURN",
-                sectionId: "MENU_RETURN_FOOD"
-            }
-        }
-    },
-    {
-        card: {
-            card: {
-                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-                info: {
-                    id: "18974",
-                    name: "Nandhana Palace",
-                    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/21/0feef1d4-2a66-43a9-8fef-825997de330a_18974.jpg",
-                    locality: "Lower Parel",
-                    areaName: "BEL-Road",
-                    costForTwo: "\u20B9500 for two",
-                    cuisines: [
-                        "Biryani",
-                        "Andhra",
-                        "South Indian",
-                        "North Indian"
-                    ],
-                    avgRating: 4.5,
-                    parentId: "2120",
-                    avgRatingString: "4.5",
-                    totalRatingsString: "62K+",
-                    promoted: true,
-                    adTrackingId: "cid=e096fb93-2b5d-4e5b-94ae-b405a067ba60~p=5~adgrpid=e096fb93-2b5d-4e5b-94ae-b405a067ba60#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=18974~plpr=COLLECTION~eid=0641d809-f69c-4e75-a909-098dc47422aa~srvts=1783078272370~collid=83634",
-                    sla: {
-                        deliveryTime: 40,
-                        lastMileTravel: 5,
-                        serviceability: "SERVICEABLE",
-                        slaString: "40-45 mins",
-                        lastMileTravelString: "5.0 km",
-                        iconType: "ICON_TYPE_EMPTY"
-                    },
-                    availability: {
-                        nextCloseTime: "2026-07-04 02:00:00",
-                        opened: true
-                    },
-                    badges: {
-                        imageBadges: [
-                            {
-                                imageId: "brand_cards/Badges%202026/35_Best%20in%20Andhra%20Food2026.png",
-                                description: "Top-rated for Andhra Food, based on user votes."
-                            },
-                            {
-                                imageId: "brand_cards/Badges%202026/39_Best%20in%20Biryani2026.png",
-                                description: "Top-rated for Biryani, based on user votes."
-                            },
-                            {
-                                imageId: "brand_cards/Badges%202026/85_Best%20in%20Corporate2026.png",
-                                description: "Top-rated for Corporate, based on user votes."
-                            },
-                            {
-                                imageId: "brand_cards/Badges%202026/86_Best%20in%20Naati%20Style%20Biryani2026.png",
-                                description: "Top-rated for Naati Style Biryani, based on user votes."
-                            }
-                        ]
-                    },
-                    isOpen: true,
-                    type: "F",
-                    badgesV2: {
-                        entityBadges: {
-                            textBased: {},
-                            imageBased: {
-                                badgeObject: [
-                                    {
-                                        attributes: {
-                                            theme: "",
-                                            imageId: "brand_cards/Badges%202026/35_Best%20in%20Andhra%20Food2026.png",
-                                            description: "Top-rated for Andhra Food, based on user votes."
-                                        }
-                                    },
-                                    {
-                                        attributes: {
-                                            imageId: "brand_cards/Badges%202026/39_Best%20in%20Biryani2026.png",
-                                            description: "Top-rated for Biryani, based on user votes.",
-                                            theme: ""
-                                        }
-                                    },
-                                    {
-                                        attributes: {
-                                            description: "Top-rated for Corporate, based on user votes.",
-                                            theme: "",
-                                            imageId: "brand_cards/Badges%202026/85_Best%20in%20Corporate2026.png"
-                                        }
-                                    },
-                                    {
-                                        attributes: {
-                                            imageId: "brand_cards/Badges%202026/86_Best%20in%20Naati%20Style%20Biryani2026.png",
-                                            description: "Top-rated for Naati Style Biryani, based on user votes.",
-                                            theme: ""
-                                        }
-                                    }
-                                ]
-                            },
-                            textExtendedBadges: {}
-                        }
-                    },
-                    aggregatedDiscountInfoV3: {
-                        header: "ITEMS",
-                        subHeader: "AT \u20B949",
-                        logoCtx: {
-                            text: "BENEFITS"
-                        }
-                    },
-                    orderabilityCommunication: {
-                        title: {},
-                        subTitle: {},
-                        message: {},
-                        customIcon: {},
-                        commsStyling: {}
-                    },
-                    differentiatedUi: {
-                        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                        differentiatedUiMediaDetails: {
-                            mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                            lottie: {},
-                            video: {}
-                        }
-                    },
-                    reviewsSummary: {},
-                    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-                    restaurantOfferPresentationInfo: {},
-                    externalRatings: {
-                        aggregatedRating: {
-                            rating: "4.5",
-                            ratingCount: "10K+"
-                        },
-                        source: "GOOGLE",
-                        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag"
-                    },
-                    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-                    campaignId: "e096fb93-2b5d-4e5b-94ae-b405a067ba60",
-                    priceComparisonComms: {}
-                },
-                analytics: {},
-                cta: {
-                    link: "swiggy://menu?restaurant_id=18974&source=collection&query=South%20Indian",
-                    text: "RESTAURANT_MENU",
-                    type: "DEEPLINK"
-                },
-                widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-            },
-            relevance: {
-                type: "RELEVANCE_TYPE_ON_MENU_RETURN",
-                sectionId: "MENU_RETURN_FOOD"
-            }
-        }
-    }
-];
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "app-layout",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 679,
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 680,
+                lineNumber: 12,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 678,
+        lineNumber: 10,
         columnNumber: 5
     }, undefined);
 };
@@ -1410,7 +758,7 @@ _c = AppLayout;
 const root = (0, _client.createRoot)(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 686,
+    lineNumber: 18,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -18167,7 +17515,15 @@ $RefreshReg$(_c, "Header");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../../utils/constants":"jcEU6"}],"jnFvT":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","../../utils/constants":"jcEU6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"jcEU6":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
+parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
+const LOGO_URL = "https://img.magnific.com/premium-vector/burger-logo_1274599-3956.jpg?semt=ais_hybrid&w=740&q=80";
+const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/";
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jnFvT":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -20475,14 +19831,6 @@ function $da9882e673ac146b$var$ErrorOverlay() {
     return null;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jcEU6":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
-parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
-const LOGO_URL = "https://img.magnific.com/premium-vector/burger-logo_1274599-3956.jpg?semt=ais_hybrid&w=740&q=80";
-const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/";
-
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"loQlg":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$8a58 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$8a58.init();
@@ -20496,13 +19844,27 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _restrauntCard = require("./RestrauntCard");
 var _restrauntCardDefault = parcelHelpers.interopDefault(_restrauntCard);
-var _mockData = require("../../utils/mockData");
-var _mockDataDefault = parcelHelpers.interopDefault(_mockData);
 var _react = require("react");
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
-    let [restrauntLists, setRestrauntLists] = (0, _react.useState)((0, _mockDataDefault.default));
+    let [restrauntLists, setRestrauntLists] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        fetchData();
+    }, []);
+    const fetchData = async ()=>{
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0035068&lng=77.5890953&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        console.log(json);
+        setRestrauntLists(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+    };
+    if (restrauntLists.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/components/Body.js",
+        lineNumber: 23,
+        columnNumber: 12
+    }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
         children: [
@@ -20511,42 +19873,43 @@ const Body = ()=>{
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                     className: "filter-btn",
                     onClick: ()=>{
-                        setRestrauntLists((0, _mockDataDefault.default).filter((res)=>res.card.card.info.avgRating >= 4));
-                        console.log(restrauntLists);
+                        setRestrauntLists(restrauntLists.filter((res)=>res.info.avgRating >= 5));
                     },
                     children: "Top Rated Restraunts"
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 11,
+                    lineNumber: 29,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 10,
+                lineNumber: 28,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "res-container",
-                children: restrauntLists.map((restraunt)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restrauntCardDefault.default), {
+                children: restrauntLists.map((restraunt)=>{
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restrauntCardDefault.default), {
                         resData: restraunt
-                    }, restraunt.card.card.info.id, false, {
+                    }, restraunt?.card?.card?.info?.id || restraunt?.info?.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 25,
-                        columnNumber: 11
-                    }, undefined))
+                        lineNumber: 43,
+                        columnNumber: 13
+                    }, undefined);
+                })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 23,
+                lineNumber: 40,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 9,
+        lineNumber: 27,
         columnNumber: 5
     }, undefined);
 };
-_s(Body, "svTlL3QcHjXXTvs0GluuInda688=");
+_s(Body, "gYhVOfjDqzqBeeZv9VyHGujtitA=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -20557,7 +19920,7 @@ $RefreshReg$(_c, "Body");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","./RestrauntCard":"wLNNc","../../utils/mockData":"grSw8","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react":"jMk1U"}],"wLNNc":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","./RestrauntCard":"wLNNc","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./Shimmer":"fSZbx"}],"wLNNc":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$1b1f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$1b1f.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -20571,7 +19934,9 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _constants = require("../../utils/constants");
 const RestaurantCard = (props)=>{
     const { resData } = props;
-    const { cloudinaryImageId, name, cuisines, deliveryTime, avgRating } = resData?.card?.card?.info;
+    const { name, cuisines, avgRating, cloudinaryImageId } = resData?.info || {};
+    const { deliveryTime } = resData.info.sla;
+    console.log(cloudinaryImageId);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "res-card",
         children: [
@@ -20581,41 +19946,41 @@ const RestaurantCard = (props)=>{
                 src: (0, _constants.CDN_URL) + cloudinaryImageId
             }, void 0, false, {
                 fileName: "src/components/RestrauntCard.js",
-                lineNumber: 8,
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: name
             }, void 0, false, {
                 fileName: "src/components/RestrauntCard.js",
-                lineNumber: 13,
+                lineNumber: 16,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: cuisines.join(", ")
+                children: cuisines?.join(", ")
             }, void 0, false, {
                 fileName: "src/components/RestrauntCard.js",
-                lineNumber: 14,
+                lineNumber: 17,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                 children: "Rating: " + avgRating
             }, void 0, false, {
                 fileName: "src/components/RestrauntCard.js",
-                lineNumber: 15,
+                lineNumber: 18,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: resData.card.card.info.sla.deliveryTime + "minutes"
+                children: deliveryTime + "minutes"
             }, void 0, false, {
                 fileName: "src/components/RestrauntCard.js",
-                lineNumber: 16,
+                lineNumber: 19,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/RestrauntCard.js",
-        lineNumber: 7,
+        lineNumber: 9,
         columnNumber: 5
     }, undefined);
 };
@@ -20629,663 +19994,129 @@ $RefreshReg$(_c, "RestaurantCard");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","../../utils/constants":"jcEU6"}],"grSw8":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","../../utils/constants":"jcEU6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"fSZbx":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$9ecf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$9ecf.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9ecf.prelude(module);
+
+try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const resList = [
-    {
-        card: {
-            card: {
-                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-                info: {
-                    id: "1208881",
-                    name: "Thirtha",
-                    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/9/27/b4cf8af1-5763-4919-bca2-cd99c5e75057_1208881 (1).jpg",
-                    locality: "Central banglore ",
-                    areaName: "Central Bangalore",
-                    costForTwo: "\u20B9350 for two",
-                    cuisines: [
-                        "North Indian",
-                        "South Indian",
-                        "Chinese",
-                        "Snacks",
-                        "Desserts",
-                        "Beverages"
-                    ],
-                    avgRating: 4.6,
-                    veg: true,
-                    parentId: "691336",
-                    avgRatingString: "4.6",
-                    totalRatingsString: "1.1K+",
-                    sla: {
-                        deliveryTime: 36,
-                        lastMileTravel: 2.4,
-                        serviceability: "SERVICEABLE",
-                        slaString: "35-40 mins",
-                        lastMileTravelString: "2.4 km",
-                        iconType: "ICON_TYPE_EMPTY"
-                    },
-                    availability: {
-                        nextCloseTime: "2026-07-03 23:59:00",
-                        opened: true
-                    },
-                    badges: {
-                        imageBadges: [
-                            {
-                                imageId: "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
-                                description: "Exclusively available on Swiggy \u2014 you won't find it elsewhere."
-                            }
-                        ]
-                    },
-                    isOpen: true,
-                    type: "F",
-                    badgesV2: {
-                        entityBadges: {
-                            textBased: {},
-                            imageBased: {
-                                badgeObject: [
-                                    {
-                                        attributes: {
-                                            imageId: "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
-                                            description: "Exclusively available on Swiggy \u2014 you won't find it elsewhere.",
-                                            theme: ""
-                                        }
-                                    }
-                                ]
-                            },
-                            textExtendedBadges: {}
-                        }
-                    },
-                    aggregatedDiscountInfoV3: {
-                        header: "ITEMS",
-                        subHeader: "AT \u20B970",
-                        logoCtx: {
-                            text: "BENEFITS"
-                        }
-                    },
-                    orderabilityCommunication: {
-                        title: {},
-                        subTitle: {},
-                        message: {},
-                        customIcon: {},
-                        commsStyling: {}
-                    },
-                    differentiatedUi: {
-                        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                        differentiatedUiMediaDetails: {
-                            mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                            lottie: {},
-                            video: {}
-                        }
-                    },
-                    reviewsSummary: {},
-                    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-                    restaurantOfferPresentationInfo: {},
-                    externalRatings: {
-                        aggregatedRating: {
-                            rating: "--"
-                        }
-                    },
-                    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-                    priceComparisonComms: {}
-                },
-                analytics: {},
-                cta: {
-                    link: "swiggy://menu?restaurant_id=1208881&source=collection&query=South%20Indian",
-                    text: "RESTAURANT_MENU",
-                    type: "DEEPLINK"
-                },
-                widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-            },
-            relevance: {
-                type: "RELEVANCE_TYPE_ON_MENU_RETURN",
-                sectionId: "MENU_RETURN_FOOD"
-            }
-        }
-    },
-    {
-        card: {
-            card: {
-                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-                info: {
-                    id: "385112",
-                    name: "Dindigul Thalappakatti - Since 1957\n",
-                    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/9/21/10abae92-cccd-4689-a426-7d862027d0ac_385112.JPG",
-                    locality: "New BEL Road",
-                    areaName: "New BEL Road",
-                    costForTwo: "\u20B9500 for two",
-                    cuisines: [
-                        "Biryani",
-                        "Barbecue",
-                        "South Indian",
-                        "Chinese",
-                        "North Indian"
-                    ],
-                    avgRating: 3.8,
-                    parentId: "641506",
-                    avgRatingString: "4.2",
-                    totalRatingsString: "7.3K+",
-                    promoted: true,
-                    adTrackingId: "cid=6b4e77ce-aa02-4cee-9674-1a499ae07169~p=2~adgrpid=6b4e77ce-aa02-4cee-9674-1a499ae07169#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=385112~plpr=COLLECTION~eid=585535f3-20b6-4972-ab18-d9be0b431f12~srvts=1783078272370~collid=83634",
-                    sla: {
-                        deliveryTime: 41,
-                        lastMileTravel: 4.8,
-                        serviceability: "SERVICEABLE",
-                        slaString: "40-45 mins",
-                        lastMileTravelString: "4.8 km",
-                        iconType: "ICON_TYPE_EMPTY"
-                    },
-                    availability: {
-                        nextCloseTime: "2026-07-03 23:59:00",
-                        opened: true
-                    },
-                    badges: {},
-                    isOpen: true,
-                    type: "F",
-                    badgesV2: {
-                        entityBadges: {
-                            imageBased: {},
-                            textExtendedBadges: {},
-                            textBased: {}
-                        }
-                    },
-                    aggregatedDiscountInfoV3: {
-                        header: "70% OFF",
-                        subHeader: "UPTO \u20B9140",
-                        logoCtx: {
-                            text: "BENEFITS"
-                        }
-                    },
-                    orderabilityCommunication: {
-                        title: {},
-                        subTitle: {},
-                        message: {},
-                        customIcon: {},
-                        commsStyling: {}
-                    },
-                    differentiatedUi: {
-                        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                        differentiatedUiMediaDetails: {
-                            mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                            lottie: {},
-                            video: {}
-                        }
-                    },
-                    reviewsSummary: {},
-                    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-                    restaurantOfferPresentationInfo: {},
-                    externalRatings: {
-                        aggregatedRating: {
-                            rating: "4.5",
-                            ratingCount: "4.7K+"
-                        },
-                        source: "GOOGLE",
-                        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag"
-                    },
-                    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-                    campaignId: "6b4e77ce-aa02-4cee-9674-1a499ae07169",
-                    priceComparisonComms: {}
-                },
-                analytics: {},
-                cta: {
-                    link: "swiggy://menu?restaurant_id=385112&source=collection&query=South%20Indian",
-                    text: "RESTAURANT_MENU",
-                    type: "DEEPLINK"
-                },
-                widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-            },
-            relevance: {
-                type: "RELEVANCE_TYPE_ON_MENU_RETURN",
-                sectionId: "MENU_RETURN_FOOD"
-            }
-        }
-    },
-    {
-        card: {
-            card: {
-                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-                info: {
-                    id: "72350",
-                    name: "Vishnu Garden",
-                    cloudinaryImageId: "q1yoajwctcy33cjhregi",
-                    locality: "RT Nagar",
-                    areaName: "Sanjay Nagar, New BEL Road",
-                    costForTwo: "\u20B9251 for two",
-                    cuisines: [
-                        "Chinese",
-                        "South Indian"
-                    ],
-                    avgRating: 4.5,
-                    veg: true,
-                    parentId: "21653",
-                    avgRatingString: "4.5",
-                    totalRatingsString: "25K+",
-                    sla: {
-                        deliveryTime: 32,
-                        lastMileTravel: 3,
-                        serviceability: "SERVICEABLE",
-                        slaString: "30-40 mins",
-                        lastMileTravelString: "3.0 km",
-                        iconType: "ICON_TYPE_EMPTY"
-                    },
-                    availability: {
-                        nextCloseTime: "2026-07-03 22:45:00",
-                        opened: true
-                    },
-                    badges: {
-                        imageBadges: [
-                            {
-                                imageId: "v1695133679/badges/Pure_Veg111.png",
-                                description: "Serves only 100% vegetarian food, with no non-veg items."
-                            }
-                        ]
-                    },
-                    isOpen: true,
-                    type: "F",
-                    badgesV2: {
-                        entityBadges: {
-                            textExtendedBadges: {},
-                            textBased: {},
-                            imageBased: {
-                                badgeObject: [
-                                    {
-                                        attributes: {
-                                            imageId: "v1695133679/badges/Pure_Veg111.png",
-                                            description: "Serves only 100% vegetarian food, with no non-veg items.",
-                                            theme: ""
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    },
-                    aggregatedDiscountInfoV3: {
-                        header: "ITEMS",
-                        subHeader: "AT \u20B939",
-                        logoCtx: {
-                            text: "BENEFITS"
-                        }
-                    },
-                    orderabilityCommunication: {
-                        title: {},
-                        subTitle: {},
-                        message: {},
-                        customIcon: {},
-                        commsStyling: {}
-                    },
-                    differentiatedUi: {
-                        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                        differentiatedUiMediaDetails: {
-                            mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                            lottie: {},
-                            video: {}
-                        }
-                    },
-                    reviewsSummary: {},
-                    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-                    restaurantOfferPresentationInfo: {},
-                    externalRatings: {
-                        aggregatedRating: {
-                            rating: "4.0",
-                            ratingCount: "8.7K+"
-                        },
-                        source: "GOOGLE",
-                        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag"
-                    },
-                    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-                    priceComparisonComms: {}
-                },
-                analytics: {},
-                cta: {
-                    link: "swiggy://menu?restaurant_id=72350&source=collection&query=South%20Indian",
-                    text: "RESTAURANT_MENU",
-                    type: "DEEPLINK"
-                },
-                widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-            },
-            relevance: {
-                type: "RELEVANCE_TYPE_ON_MENU_RETURN",
-                sectionId: "MENU_RETURN_FOOD"
-            }
-        }
-    },
-    {
-        card: {
-            card: {
-                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-                info: {
-                    id: "1061760",
-                    name: "KOMBOZZ by Thalappakatti",
-                    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/3/18/3e6aadfa-57c8-45b6-8a31-fc7950a87a3b_1061760.jpg",
-                    locality: "New Bel Road",
-                    areaName: "New BEL Road, Bangalore",
-                    costForTwo: "\u20B9450 for two",
-                    cuisines: [
-                        "Chinese",
-                        "Biryani",
-                        "Desserts",
-                        "South Indian",
-                        "Beverages",
-                        "North Indian",
-                        "Combos"
-                    ],
-                    avgRating: 3.7,
-                    parentId: "616357",
-                    avgRatingString: "4.2",
-                    totalRatingsString: "416",
-                    promoted: true,
-                    adTrackingId: "cid=7688bf08-d4f7-4347-b57a-477e12814817~p=4~adgrpid=7688bf08-d4f7-4347-b57a-477e12814817#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=1061760~plpr=COLLECTION~eid=fa53d396-41b2-4c64-baac-c18985245af0~srvts=1783078272370~collid=83634",
-                    sla: {
-                        deliveryTime: 40,
-                        lastMileTravel: 4.8,
-                        serviceability: "SERVICEABLE",
-                        slaString: "35-40 mins",
-                        lastMileTravelString: "4.8 km",
-                        iconType: "ICON_TYPE_EMPTY"
-                    },
-                    availability: {
-                        nextCloseTime: "2026-07-03 23:59:00",
-                        opened: true
-                    },
-                    badges: {},
-                    isOpen: true,
-                    type: "F",
-                    badgesV2: {
-                        entityBadges: {
-                            imageBased: {},
-                            textExtendedBadges: {},
-                            textBased: {}
-                        }
-                    },
-                    aggregatedDiscountInfoV3: {
-                        header: "70% OFF",
-                        subHeader: "UPTO \u20B9140",
-                        logoCtx: {
-                            text: "BENEFITS"
-                        }
-                    },
-                    orderabilityCommunication: {
-                        title: {},
-                        subTitle: {},
-                        message: {},
-                        customIcon: {},
-                        commsStyling: {}
-                    },
-                    differentiatedUi: {
-                        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                        differentiatedUiMediaDetails: {
-                            mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                            lottie: {},
-                            video: {}
-                        }
-                    },
-                    reviewsSummary: {},
-                    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-                    restaurantOfferPresentationInfo: {},
-                    externalRatings: {
-                        aggregatedRating: {
-                            rating: "--"
-                        }
-                    },
-                    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-                    campaignId: "7688bf08-d4f7-4347-b57a-477e12814817",
-                    priceComparisonComms: {}
-                },
-                analytics: {},
-                cta: {
-                    link: "swiggy://menu?restaurant_id=1061760&source=collection&query=South%20Indian",
-                    text: "RESTAURANT_MENU",
-                    type: "DEEPLINK"
-                },
-                widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-            },
-            relevance: {
-                type: "RELEVANCE_TYPE_ON_MENU_RETURN",
-                sectionId: "MENU_RETURN_FOOD"
-            }
-        }
-    },
-    {
-        card: {
-            card: {
-                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-                info: {
-                    id: "651231",
-                    name: "Ambur Star Briyani Since 1890",
-                    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/12/f0a2f320-20e5-4798-be9a-3c247279b4d5_651231.jpg",
-                    locality: "Sanjay Nagar, New BEL Road",
-                    areaName: "Sanjay Nagar",
-                    costForTwo: "\u20B9500 for two",
-                    cuisines: [
-                        "Biryani",
-                        "Indian",
-                        "South Indian"
-                    ],
-                    avgRating: 3.5,
-                    parentId: "21400",
-                    avgRatingString: "4.4",
-                    totalRatingsString: "7.9K+",
-                    sla: {
-                        deliveryTime: 34,
-                        lastMileTravel: 3.7,
-                        serviceability: "SERVICEABLE",
-                        slaString: "30-35 mins",
-                        lastMileTravelString: "3.7 km",
-                        iconType: "ICON_TYPE_EMPTY"
-                    },
-                    availability: {
-                        nextCloseTime: "2026-07-04 00:00:00",
-                        opened: true
-                    },
-                    badges: {},
-                    isOpen: true,
-                    type: "F",
-                    badgesV2: {
-                        entityBadges: {
-                            textBased: {},
-                            imageBased: {},
-                            textExtendedBadges: {}
-                        }
-                    },
-                    aggregatedDiscountInfoV3: {
-                        header: "ITEMS",
-                        subHeader: "AT \u20B939",
-                        logoCtx: {
-                            text: "BENEFITS"
-                        }
-                    },
-                    orderabilityCommunication: {
-                        title: {},
-                        subTitle: {},
-                        message: {},
-                        customIcon: {},
-                        commsStyling: {}
-                    },
-                    differentiatedUi: {
-                        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                        differentiatedUiMediaDetails: {
-                            mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                            lottie: {},
-                            video: {}
-                        }
-                    },
-                    reviewsSummary: {},
-                    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-                    restaurantOfferPresentationInfo: {},
-                    externalRatings: {
-                        aggregatedRating: {
-                            rating: "3.9",
-                            ratingCount: "802"
-                        },
-                        source: "GOOGLE",
-                        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag"
-                    },
-                    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-                    priceComparisonComms: {}
-                },
-                analytics: {},
-                cta: {
-                    link: "swiggy://menu?restaurant_id=651231&source=collection&query=South%20Indian",
-                    text: "RESTAURANT_MENU",
-                    type: "DEEPLINK"
-                },
-                widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-            },
-            relevance: {
-                type: "RELEVANCE_TYPE_ON_MENU_RETURN",
-                sectionId: "MENU_RETURN_FOOD"
-            }
-        }
-    },
-    {
-        card: {
-            card: {
-                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-                info: {
-                    id: "18974",
-                    name: "Nandhana Palace",
-                    cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2024/11/21/0feef1d4-2a66-43a9-8fef-825997de330a_18974.jpg",
-                    locality: "Lower Parel",
-                    areaName: "BEL-Road",
-                    costForTwo: "\u20B9500 for two",
-                    cuisines: [
-                        "Biryani",
-                        "Andhra",
-                        "South Indian",
-                        "North Indian"
-                    ],
-                    avgRating: 4.5,
-                    parentId: "2120",
-                    avgRatingString: "4.5",
-                    totalRatingsString: "62K+",
-                    promoted: true,
-                    adTrackingId: "cid=e096fb93-2b5d-4e5b-94ae-b405a067ba60~p=5~adgrpid=e096fb93-2b5d-4e5b-94ae-b405a067ba60#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=18974~plpr=COLLECTION~eid=0641d809-f69c-4e75-a909-098dc47422aa~srvts=1783078272370~collid=83634",
-                    sla: {
-                        deliveryTime: 40,
-                        lastMileTravel: 5,
-                        serviceability: "SERVICEABLE",
-                        slaString: "40-45 mins",
-                        lastMileTravelString: "5.0 km",
-                        iconType: "ICON_TYPE_EMPTY"
-                    },
-                    availability: {
-                        nextCloseTime: "2026-07-04 02:00:00",
-                        opened: true
-                    },
-                    badges: {
-                        imageBadges: [
-                            {
-                                imageId: "brand_cards/Badges%202026/35_Best%20in%20Andhra%20Food2026.png",
-                                description: "Top-rated for Andhra Food, based on user votes."
-                            },
-                            {
-                                imageId: "brand_cards/Badges%202026/39_Best%20in%20Biryani2026.png",
-                                description: "Top-rated for Biryani, based on user votes."
-                            },
-                            {
-                                imageId: "brand_cards/Badges%202026/85_Best%20in%20Corporate2026.png",
-                                description: "Top-rated for Corporate, based on user votes."
-                            },
-                            {
-                                imageId: "brand_cards/Badges%202026/86_Best%20in%20Naati%20Style%20Biryani2026.png",
-                                description: "Top-rated for Naati Style Biryani, based on user votes."
-                            }
-                        ]
-                    },
-                    isOpen: true,
-                    type: "F",
-                    badgesV2: {
-                        entityBadges: {
-                            textBased: {},
-                            imageBased: {
-                                badgeObject: [
-                                    {
-                                        attributes: {
-                                            theme: "",
-                                            imageId: "brand_cards/Badges%202026/35_Best%20in%20Andhra%20Food2026.png",
-                                            description: "Top-rated for Andhra Food, based on user votes."
-                                        }
-                                    },
-                                    {
-                                        attributes: {
-                                            imageId: "brand_cards/Badges%202026/39_Best%20in%20Biryani2026.png",
-                                            description: "Top-rated for Biryani, based on user votes.",
-                                            theme: ""
-                                        }
-                                    },
-                                    {
-                                        attributes: {
-                                            description: "Top-rated for Corporate, based on user votes.",
-                                            theme: "",
-                                            imageId: "brand_cards/Badges%202026/85_Best%20in%20Corporate2026.png"
-                                        }
-                                    },
-                                    {
-                                        attributes: {
-                                            imageId: "brand_cards/Badges%202026/86_Best%20in%20Naati%20Style%20Biryani2026.png",
-                                            description: "Top-rated for Naati Style Biryani, based on user votes.",
-                                            theme: ""
-                                        }
-                                    }
-                                ]
-                            },
-                            textExtendedBadges: {}
-                        }
-                    },
-                    aggregatedDiscountInfoV3: {
-                        header: "ITEMS",
-                        subHeader: "AT \u20B949",
-                        logoCtx: {
-                            text: "BENEFITS"
-                        }
-                    },
-                    orderabilityCommunication: {
-                        title: {},
-                        subTitle: {},
-                        message: {},
-                        customIcon: {},
-                        commsStyling: {}
-                    },
-                    differentiatedUi: {
-                        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                        differentiatedUiMediaDetails: {
-                            mediaType: "ADS_MEDIA_ENUM_IMAGE",
-                            lottie: {},
-                            video: {}
-                        }
-                    },
-                    reviewsSummary: {},
-                    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-                    restaurantOfferPresentationInfo: {},
-                    externalRatings: {
-                        aggregatedRating: {
-                            rating: "4.5",
-                            ratingCount: "10K+"
-                        },
-                        source: "GOOGLE",
-                        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag"
-                    },
-                    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-                    campaignId: "e096fb93-2b5d-4e5b-94ae-b405a067ba60",
-                    priceComparisonComms: {}
-                },
-                analytics: {},
-                cta: {
-                    link: "swiggy://menu?restaurant_id=18974&source=collection&query=South%20Indian",
-                    text: "RESTAURANT_MENU",
-                    type: "DEEPLINK"
-                },
-                widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-            },
-            relevance: {
-                type: "RELEVANCE_TYPE_ON_MENU_RETURN",
-                sectionId: "MENU_RETURN_FOOD"
-            }
-        }
-    }
-];
-exports.default = resList;
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Shimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "shimmer-container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 5,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 6,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 7,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 12,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 14,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 15,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 16,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Shimmer.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["frqA7","hh6uc"], "hh6uc", "parcelRequire5906", {}, null, null, "http://localhost:1234")
+  $parcel$ReactRefreshHelpers$9ecf.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["frqA7","hh6uc"], "hh6uc", "parcelRequire5906", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=Food-ordering-app.2c54e4d8.js.map

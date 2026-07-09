@@ -54,4 +54,16 @@
   margin: 10px;
   padding: 10px;
 }
+
+.shimmer-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.shimmer-card {
+  background-color: #bdb9b9;
+  width: 200px;
+  height: 400px;
+  margin: 20px;
+}
 /*# sourceMappingURL=Food-ordering-app.aa436662.css.map */

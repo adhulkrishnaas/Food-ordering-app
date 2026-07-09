@@ -1,9 +1,27 @@
 import RestaurantCard from "./RestrauntCard";
-import resList from "../../utils/mockData";
-import resList from "../../utils/mockData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
 const Body = () => {
-  let [restrauntLists, setRestrauntLists] = useState(resList);
+  let [restrauntLists, setRestrauntLists] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0035068&lng=77.5890953&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
+    );
+    const json = await data.json();
+    console.log(json);
+    setRestrauntLists(
+      json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants,
+    );
+  };
+
+  if (restrauntLists.length === 0) {
+    return <Shimmer />;
+  }
 
   return (
     <div className="body">
@@ -12,21 +30,22 @@ const Body = () => {
           className="filter-btn"
           onClick={() => {
             setRestrauntLists(
-              resList.filter((res) => res.card.card.info.avgRating >= 4),
+              restrauntLists.filter((res) => res.info.avgRating >= 5),
             );
-            console.log(restrauntLists);
           }}
         >
           Top Rated Restraunts
         </button>
       </div>
       <div className="res-container">
-        {restrauntLists.map((restraunt) => (
-          <RestaurantCard
-            key={restraunt.card.card.info.id}
-            resData={restraunt}
-          />
-        ))}
+        {restrauntLists.map((restraunt) => {
+          return (
+            <RestaurantCard
+              key={restraunt?.card?.card?.info?.id || restraunt?.info?.id}
+              resData={restraunt}
+            />
+          );
+        })}
       </div>
     </div>
   );
