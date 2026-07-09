@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 const Body = () => {
   let [restrauntLists, setRestrauntLists] = useState([]);
+  let [filteredRestraunts, setFilteredRestraunts] = useState([]);
+  let [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -14,23 +16,51 @@ const Body = () => {
     );
     const json = await data.json();
     console.log(json);
+
     setRestrauntLists(
+      json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants,
+    );
+    setFilteredRestraunts(
       json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants,
     );
   };
 
-  if (restrauntLists.length === 0) {
-    return <Shimmer />;
-  }
-
-  return (
+  return restrauntLists.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
+        <input
+          type="text"
+          className="input-box"
+          value={searchText}
+          onChange={(e) => {
+            setSearchText(e.target.value);
+          }}
+        />
+        <button
+          className="filter-btn"
+          onClick={() => {
+            //
+            //
+            console.log(searchText);
+            setFilteredRestraunts(
+              restrauntLists.filter((restraunt) =>
+                restraunt.info.name
+                  .toLowerCase()
+                  .includes(searchText.toLowerCase()),
+              ),
+            );
+            console.log(filteredRestraunts);
+          }}
+        >
+          Search
+        </button>
         <button
           className="filter-btn"
           onClick={() => {
             setRestrauntLists(
-              restrauntLists.filter((res) => res.info.avgRating >= 5),
+              restrauntLists.filter((res) => res.info.avgRating >= 4.2),
             );
           }}
         >
@@ -38,7 +68,7 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {restrauntLists.map((restraunt) => {
+        {filteredRestraunts.map((restraunt) => {
           return (
             <RestaurantCard
               key={restraunt?.card?.card?.info?.id || restraunt?.info?.id}
