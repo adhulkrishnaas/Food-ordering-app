@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Suspense } from "react";
+import { lazy } from "react";
 import { createRoot } from "react-dom/client";
 import "../index.css";
 import Header from "./components/Header";
@@ -9,6 +10,8 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestrauntMenu from "./components/RestrauntMenu";
+
+const Grocery = lazy(() => import("./components/Grocery"));
 
 const AppLayout = () => {
   return (
@@ -38,6 +41,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/restraunts/:resId",
         element: <RestrauntMenu />,
+      },
+      {
+        path: "grocery",
+        element: (
+          <Suspense fallback={<h1>Loading....</h1>}>
+            <Grocery />
+          </Suspense>
+        ),
       },
     ],
   },
