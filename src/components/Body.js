@@ -2,27 +2,11 @@ import RestaurantCard from "./RestrauntCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useRestrauntList from "../../utils/useRestrauntList";
 const Body = () => {
-  let [restrauntLists, setRestrauntLists] = useState([]);
-  let [filteredRestraunts, setFilteredRestraunts] = useState([]);
   let [searchText, setSearchText] = useState("");
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    const data = await fetch("https://namastedev.com/api/v1/listRestaurants");
-    const json = await data.json();
-    console.log(json);
-
-    setRestrauntLists(
-      json.data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
-    );
-    setFilteredRestraunts(
-      json.data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
-    );
-  };
+  const { restrauntLists, filteredRestraunts, setFilteredRestraunts } =
+    useRestrauntList();
 
   return restrauntLists.length === 0 ? (
     <Shimmer />
@@ -40,9 +24,6 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-            //
-            //
-            console.log(searchText);
             setFilteredRestraunts(
               restrauntLists.filter((restraunt) =>
                 restraunt.info.name
@@ -70,6 +51,7 @@ const Body = () => {
         {filteredRestraunts.map((restraunt) => {
           return (
             <Link
+              className="link-restraunt"
               key={restraunt?.info?.id}
               to={"restraunts/" + restraunt.info.id}
             >
