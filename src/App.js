@@ -4,15 +4,17 @@ import "../index.css";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import RestrauntCard from "./components/RestrauntCard";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./components/About";
-import Contactus from "./components/Contactus";
+import Contact from "./components/Contact";
+import Error from "./components/Error";
+import RestrauntMenu from "./components/RestrauntMenu";
 
 const AppLayout = () => {
   return (
     <div className="app-layout">
       <Header />
-      <Body />
+      <Outlet />
     </div>
   );
 };
@@ -20,14 +22,24 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-  },
-  {
-    path: "about",
-    element: <About />,
-  },
-  {
-    path: "contactus",
-    element: <Contactus />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "/restraunts/:resId",
+        element: <RestrauntMenu />,
+      },
+    ],
   },
 ]);
 const root = createRoot(document.getElementById("root"));
