@@ -27333,7 +27333,6 @@ const Body = ()=>{
                         className: "px-4.5 py-2 mx-1.5 bg-green-100 border-black rounded-lg",
                         onClick: ()=>{
                             setFilteredRestraunts(restrauntLists.filter((restraunt)=>restraunt.info.name.toLowerCase().includes(searchText.toLowerCase())));
-                            console.log(filteredRestraunts);
                         },
                         children: "Search"
                     }, void 0, false, {
@@ -27349,7 +27348,7 @@ const Body = ()=>{
                         children: "Top Rated Restraunts"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 41,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -27368,24 +27367,24 @@ const Body = ()=>{
                             resData: restraunt
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 63,
+                            lineNumber: 62,
                             columnNumber: 19
                         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restrauntCardDefault.default), {
                             resData: restraunt
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 65,
+                            lineNumber: 64,
                             columnNumber: 19
                         }, undefined)
                     }, restraunt?.info?.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 55,
+                        lineNumber: 54,
                         columnNumber: 13
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 52,
+                lineNumber: 51,
                 columnNumber: 7
             }, undefined)
         ]
@@ -27681,7 +27680,6 @@ const useRestrauntList = ()=>{
         setRestrauntLists(json.data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
         setFilteredRestraunts(json.data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
     };
-    console.log(restrauntLists);
     return {
         restrauntLists,
         filteredRestraunts,
@@ -27852,6 +27850,8 @@ var _reactRouterDom = require("react-router-dom");
 var _constants = require("../../utils/constants");
 var _useRestrauntMenu = require("../../utils/useRestrauntMenu");
 var _useRestrauntMenuDefault = parcelHelpers.interopDefault(_useRestrauntMenu);
+var _restrauntCategory = require("./RestrauntCategory");
+var _restrauntCategoryDefault = parcelHelpers.interopDefault(_restrauntCategory);
 var _s = $RefreshSig$();
 const RestrauntMenu = ()=>{
     _s();
@@ -27859,23 +27859,26 @@ const RestrauntMenu = ()=>{
     const resInfo = (0, _useRestrauntMenuDefault.default)(resId);
     if (resInfo === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/RestrauntMenu.js",
-        lineNumber: 11,
+        lineNumber: 12,
         columnNumber: 32
     }, undefined);
     const { name, cuisines, costForTwo } = resInfo.cards[2].card.card.info;
     const { itemCards } = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
-    console.log(itemCards);
+    const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter((c)=>c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+    console.log(categories);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "menu",
+        className: "text-center my-6 ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "font-bold text-2xl",
                 children: name
             }, void 0, false, {
                 fileName: "src/components/RestrauntMenu.js",
-                lineNumber: 19,
+                lineNumber: 26,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "font-bold text-xl",
                 children: [
                     cuisines.join(", "),
                     " - ",
@@ -27883,32 +27886,20 @@ const RestrauntMenu = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestrauntMenu.js",
-                lineNumber: 20,
+                lineNumber: 27,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                children: itemCards.map((item)=>{
-                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: [
-                            item.card.info.name,
-                            " -",
-                            item.card.info.price / 100
-                        ]
-                    }, item.card.info.id, true, {
-                        fileName: "src/components/RestrauntMenu.js",
-                        lineNumber: 26,
-                        columnNumber: 13
-                    }, undefined);
-                })
-            }, void 0, false, {
-                fileName: "src/components/RestrauntMenu.js",
-                lineNumber: 23,
-                columnNumber: 7
-            }, undefined)
+            categories.map((category)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restrauntCategoryDefault.default), {
+                    data: category
+                }, Math.random(), false, {
+                    fileName: "src/components/RestrauntMenu.js",
+                    lineNumber: 32,
+                    columnNumber: 9
+                }, undefined))
         ]
     }, void 0, true, {
         fileName: "src/components/RestrauntMenu.js",
-        lineNumber: 18,
+        lineNumber: 25,
         columnNumber: 5
     }, undefined);
 };
@@ -27928,7 +27919,7 @@ $RefreshReg$(_c, "RestrauntMenu");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./Shimmer":"fSZbx","react-router-dom":"61z4w","../../utils/constants":"jcEU6","../../utils/useRestrauntMenu":"24Gjl","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"24Gjl":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./Shimmer":"fSZbx","react-router-dom":"61z4w","../../utils/constants":"jcEU6","../../utils/useRestrauntMenu":"24Gjl","./RestrauntCategory":"95VAD","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"24Gjl":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$52e5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$52e5.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -27953,7 +27944,6 @@ const useRestrauntMenu = (resId)=>{
         const json = await data.json();
         setResInfo(json.data);
     };
-    console.log(resInfo);
     return resInfo;
 };
 _s(useRestrauntMenu, "hwGjLfSdFvMgUl5xpwSM0SJv98A=");
@@ -27964,7 +27954,113 @@ exports.default = useRestrauntMenu;
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"jMk1U","./constants":"jcEU6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"baeVm":[function(require,module,exports,__globalThis) {
+},{"react":"jMk1U","./constants":"jcEU6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"95VAD":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$efa8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$efa8.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$efa8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _itemList = require("./ItemList");
+var _itemListDefault = parcelHelpers.interopDefault(_itemList);
+const RestrauntCategory = (data)=>{
+    console.log(data);
+    const { title, itemCards } = data.data.card.card;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "w-6/12 bg-gray-50 shadow-lg p-4 mx-auto my-4 flex justify-between",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "font-bold text-lg",
+                        children: [
+                            title,
+                            " (",
+                            itemCards.length,
+                            ")"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/RestrauntCategory.js",
+                        lineNumber: 11,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: "\u2B07\uFE0F"
+                    }, void 0, false, {
+                        fileName: "src/components/RestrauntCategory.js",
+                        lineNumber: 14,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RestrauntCategory.js",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemListDefault.default), {
+                items: itemCards
+            }, void 0, false, {
+                fileName: "src/components/RestrauntCategory.js",
+                lineNumber: 17,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RestrauntCategory.js",
+        lineNumber: 8,
+        columnNumber: 5
+    }, undefined);
+};
+_c = RestrauntCategory;
+exports.default = RestrauntCategory;
+var _c;
+$RefreshReg$(_c, "RestrauntCategory");
+
+  $parcel$ReactRefreshHelpers$efa8.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./ItemList":"jI120","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"jI120":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$ef95 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$ef95.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ef95.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const ItemList = (items)=>{
+    console.log(items);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: "ItemList"
+    }, void 0, false, {
+        fileName: "src/components/ItemList.js",
+        lineNumber: 5,
+        columnNumber: 10
+    }, undefined);
+};
+_c = ItemList;
+exports.default = ItemList;
+var _c;
+$RefreshReg$(_c, "ItemList");
+
+  $parcel$ReactRefreshHelpers$ef95.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"baeVm":[function(require,module,exports,__globalThis) {
 module.exports = import("./Grocery.390591cb.js").then(()=>module.bundle.root('cz4SJ'));
 
 },{"cz4SJ":"cz4SJ"}]},["frqA7","hh6uc"], "hh6uc", "parcelRequire5906", {}, null, null, "http://localhost:1234")

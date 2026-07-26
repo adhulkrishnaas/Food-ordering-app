@@ -33,7 +33,6 @@ const Body = () => {
                   .includes(searchText.toLowerCase()),
               ),
             );
-            console.log(filteredRestraunts);
           }}
         >
           Search

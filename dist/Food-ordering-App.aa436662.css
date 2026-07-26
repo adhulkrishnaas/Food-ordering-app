@@ -49,6 +49,7 @@
     --color-green-800: oklch(44.8% .119 151.328);
     --color-blue-100: oklch(93.2% .032 255.585);
     --color-pink-50: oklch(97.1% .014 343.198);
+    --color-gray-50: oklch(98.5% .002 247.839);
     --color-gray-200: oklch(92.8% .006 264.531);
     --color-gray-500: oklch(55.1% .027 264.364);
     --color-gray-700: oklch(37.3% .034 259.733);
@@ -60,8 +61,12 @@
     --text-xs--line-height: calc(1 / .75);
     --text-sm: .875rem;
     --text-sm--line-height: calc(1.25 / .875);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --radius-md: .375rem;
@@ -327,32 +332,12 @@
     position: relative;
   }
 
-  .top-2 {
-    top: calc(var(--spacing) * 2);
-  }
-
   .top-4 {
     top: calc(var(--spacing) * 4);
   }
 
-  .top-8 {
-    top: calc(var(--spacing) * 8);
-  }
-
-  .left-2 {
-    left: calc(var(--spacing) * 2);
-  }
-
-  .left-4 {
-    left: calc(var(--spacing) * 4);
-  }
-
   .left-8 {
     left: calc(var(--spacing) * 8);
-  }
-
-  .left-10 {
-    left: calc(var(--spacing) * 10);
   }
 
   .z-10 {
@@ -365,6 +350,18 @@
 
   .mx-1\.5 {
     margin-inline: calc(var(--spacing) * 1.5);
+  }
+
+  .mx-auto {
+    margin-inline: auto;
+  }
+
+  .my-4 {
+    margin-block: calc(var(--spacing) * 4);
+  }
+
+  .my-6 {
+    margin-block: calc(var(--spacing) * 6);
   }
 
   .mt-3 {
@@ -404,6 +401,10 @@
 
   .h-full {
     height: 100%;
+  }
+
+  .w-6\/12 {
+    width: 50%;
   }
 
   .w-72 {
@@ -480,6 +481,10 @@
     background-color: var(--color-blue-100);
   }
 
+  .bg-gray-50 {
+    background-color: var(--color-gray-50);
+  }
+
   .bg-green-100 {
     background-color: var(--color-green-100);
   }
@@ -534,6 +539,20 @@
 
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
 
   .text-sm {

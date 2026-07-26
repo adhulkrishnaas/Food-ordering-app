@@ -17,7 +17,6 @@ const useRestrauntList = () => {
       json.data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
     );
   };
-  console.log(restrauntLists);
 
   return { restrauntLists, filteredRestraunts, setFilteredRestraunts };
 };
