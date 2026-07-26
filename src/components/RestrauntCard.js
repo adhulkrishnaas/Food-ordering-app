@@ -5,10 +5,10 @@ const RestaurantCard = (props) => {
   const { deliveryTime } = resData.info.sla;
 
   return (
-    <div className=" m-4 p-4 w-88 border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 bg-white">
-      <div className=" h-58 overflow-hidden rounded-x">
+    <div className=" m-4 p-4 w-72 border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 bg-white grow min-w-[200px]">
+      <div className=" h-58 overflow-hidden">
         <img
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover rounded-2xl"
           alt="res-logo"
           src={CDN_URL + cloudinaryImageId}
         />
@@ -28,6 +28,20 @@ const RestaurantCard = (props) => {
         </span>
         <span>{deliveryTime + "minutes"}</span>
       </div>
+    </div>
+  );
+};
+
+// Higher order component
+//input - restraunt ==>restraunt card with veg label
+
+export const withVegLabel = (RestaurantCard) => {
+  return (props) => (
+    <div className="relative">
+      <label className="absolute top-4 left-8 bg-green-600 text-white text-xs px-2 py-1 rounded-md z-10">
+        Veg
+      </label>
+      <RestaurantCard {...props} />
     </div>
   );
 };

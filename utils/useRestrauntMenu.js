@@ -13,7 +13,7 @@ const useRestrauntMenu = (resId) => {
     const json = await data.json();
     setResInfo(json.data);
   };
-
+  console.log(resInfo);
   return resInfo;
 };
 

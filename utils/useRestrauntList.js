@@ -9,6 +9,7 @@ const useRestrauntList = () => {
   const fetchData = async () => {
     const data = await fetch("https://namastedev.com/api/v1/listRestaurants");
     const json = await data.json();
+
     setRestrauntLists(
       json.data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
     );
@@ -16,6 +17,8 @@ const useRestrauntList = () => {
       json.data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
     );
   };
+  console.log(restrauntLists);
+
   return { restrauntLists, filteredRestraunts, setFilteredRestraunts };
 };
 

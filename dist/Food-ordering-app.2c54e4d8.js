@@ -17524,13 +17524,13 @@ const Header = ()=>{
     const [isLoggedIn, setIsLoggedIn] = (0, _react.useState)(false);
     const onlineStatus = (0, _useOnlineStatusDefault.default)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex bg-pink-50 shadow-lg justify-between",
+        className: "flex bg-pink-50 shadow-lg justify-between h-20",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "logo-container",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     alt: "logo",
-                    className: "w-46",
+                    className: "h-full object-cover ",
                     src: (0, _constants.LOGO_URL)
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
@@ -27305,10 +27305,11 @@ var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
     let [searchText, setSearchText] = (0, _react.useState)("");
+    const RestrauntCardVeg = (0, _restrauntCard.withVegLabel)((0, _restrauntCardDefault.default));
     const { restrauntLists, filteredRestraunts, setFilteredRestraunts } = (0, _useRestrauntListDefault.default)();
     return restrauntLists.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 12,
+        lineNumber: 14,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
@@ -27318,18 +27319,18 @@ const Body = ()=>{
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "text",
-                        className: "border border-solid border-black",
+                        className: "border border-solid border-black rounded-lg p-1.5",
                         value: searchText,
                         onChange: (e)=>{
                             setSearchText(e.target.value);
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 16,
+                        lineNumber: 18,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "px-4.5 py-1.5 mx-1.5 bg-green-100 border-black rounded-lg",
+                        className: "px-4.5 py-2 mx-1.5 bg-green-100 border-black rounded-lg",
                         onClick: ()=>{
                             setFilteredRestraunts(restrauntLists.filter((restraunt)=>restraunt.info.name.toLowerCase().includes(searchText.toLowerCase())));
                             console.log(filteredRestraunts);
@@ -27337,54 +27338,60 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 24,
+                        lineNumber: 26,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "px-3 py-1.5 bg-blue-100 rounded-lg",
+                        className: "px-3 py-2 bg-blue-100 rounded-lg",
                         onClick: ()=>{
                             setRestrauntLists(restrauntLists.filter((res)=>res.info.avgRating >= 4.2));
                         },
                         children: "Top Rated Restraunts"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 39,
+                        lineNumber: 41,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 15,
+                lineNumber: 17,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex flex-wrap justify-between",
+                className: "flex flex-wrap",
                 children: filteredRestraunts.map((restraunt)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         className: "link-restraunt",
                         to: "restraunts/" + restraunt.info.id,
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restrauntCardDefault.default), {
+                        children: /**If a restraunt is veg , then add a veg label to it */ restraunt.info.veg ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCardVeg, {
                             resData: restraunt
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 58,
-                            columnNumber: 15
+                            lineNumber: 63,
+                            columnNumber: 19
+                        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restrauntCardDefault.default), {
+                            resData: restraunt
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 65,
+                            columnNumber: 19
                         }, undefined)
                     }, restraunt?.info?.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 53,
+                        lineNumber: 55,
                         columnNumber: 13
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 50,
+                lineNumber: 52,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 14,
+        lineNumber: 16,
         columnNumber: 5
     }, undefined);
 };
@@ -27413,6 +27420,7 @@ $parcel$ReactRefreshHelpers$1b1f.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "withVegLabel", ()=>withVegLabel);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _constants = require("../../utils/constants");
 const RestaurantCard = (props)=>{
@@ -27420,12 +27428,12 @@ const RestaurantCard = (props)=>{
     const { name, cuisines, avgRating, cloudinaryImageId } = resData?.info || {};
     const { deliveryTime } = resData.info.sla;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: " m-4 p-4 w-88 border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 bg-white",
+        className: " m-4 p-4 w-72 border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 bg-white grow min-w-[200px]",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: " h-58 overflow-hidden rounded-x",
+                className: " h-58 overflow-hidden",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "w-full h-full object-cover",
+                    className: "w-full h-full object-cover rounded-2xl",
                     alt: "res-logo",
                     src: (0, _constants.CDN_URL) + cloudinaryImageId
                 }, void 0, false, {
@@ -27490,6 +27498,32 @@ const RestaurantCard = (props)=>{
     }, undefined);
 };
 _c = RestaurantCard;
+const withVegLabel = (RestaurantCard)=>{
+    return (props)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "relative",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                    className: "absolute top-4 left-8 bg-green-600 text-white text-xs px-2 py-1 rounded-md z-10",
+                    children: "Veg"
+                }, void 0, false, {
+                    fileName: "src/components/RestrauntCard.js",
+                    lineNumber: 41,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                    ...props
+                }, void 0, false, {
+                    fileName: "src/components/RestrauntCard.js",
+                    lineNumber: 44,
+                    columnNumber: 7
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/RestrauntCard.js",
+            lineNumber: 40,
+            columnNumber: 5
+        }, undefined);
+};
 exports.default = RestaurantCard;
 var _c;
 $RefreshReg$(_c, "RestaurantCard");
@@ -27647,6 +27681,7 @@ const useRestrauntList = ()=>{
         setRestrauntLists(json.data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
         setFilteredRestraunts(json.data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
     };
+    console.log(restrauntLists);
     return {
         restrauntLists,
         filteredRestraunts,
@@ -27918,6 +27953,7 @@ const useRestrauntMenu = (resId)=>{
         const json = await data.json();
         setResInfo(json.data);
     };
+    console.log(resInfo);
     return resInfo;
 };
 _s(useRestrauntMenu, "hwGjLfSdFvMgUl5xpwSM0SJv98A=");

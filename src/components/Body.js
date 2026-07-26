@@ -3,8 +3,10 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useRestrauntList from "../../utils/useRestrauntList";
+import { withVegLabel } from "./RestrauntCard";
 const Body = () => {
   let [searchText, setSearchText] = useState("");
+  const RestrauntCardVeg = withVegLabel(RestaurantCard);
   const { restrauntLists, filteredRestraunts, setFilteredRestraunts } =
     useRestrauntList();
 
@@ -15,14 +17,14 @@ const Body = () => {
       <div className="filter m-4 p-4 flex items-center">
         <input
           type="text"
-          className="border border-solid border-black"
+          className="border border-solid border-black rounded-lg p-1.5"
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
           }}
         />
         <button
-          className="px-4.5 py-1.5 mx-1.5 bg-green-100 border-black rounded-lg"
+          className="px-4.5 py-2 mx-1.5 bg-green-100 border-black rounded-lg"
           onClick={() => {
             setFilteredRestraunts(
               restrauntLists.filter((restraunt) =>
@@ -37,7 +39,7 @@ const Body = () => {
           Search
         </button>
         <button
-          className="px-3 py-1.5 bg-blue-100 rounded-lg"
+          className="px-3 py-2 bg-blue-100 rounded-lg"
           onClick={() => {
             setRestrauntLists(
               restrauntLists.filter((res) => res.info.avgRating >= 4.2),
@@ -47,7 +49,7 @@ const Body = () => {
           Top Rated Restraunts
         </button>
       </div>
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap">
         {filteredRestraunts.map((restraunt) => {
           return (
             <Link
@@ -55,7 +57,14 @@ const Body = () => {
               key={restraunt?.info?.id}
               to={"restraunts/" + restraunt.info.id}
             >
-              <RestaurantCard resData={restraunt} />
+              {
+                /**If a restraunt is veg , then add a veg label to it */
+                restraunt.info.veg ? (
+                  <RestrauntCardVeg resData={restraunt} />
+                ) : (
+                  <RestaurantCard resData={restraunt} />
+                )
+              }
             </Link>
           );
         })}
