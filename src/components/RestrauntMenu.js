@@ -20,7 +20,6 @@ const RestrauntMenu = () => {
         c.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
     );
-  console.log(categories);
   return (
     <div className="text-center my-6 ">
       <h1 className="font-bold text-2xl">{name}</h1>
@@ -29,18 +28,14 @@ const RestrauntMenu = () => {
       </p>
       {/*Categories Acoordiam*/}
       {categories.map((category) => (
-        <RestrauntCategory key={Math.random()} data={category} />
+        <RestrauntCategory
+          key={Math.random()}
+          data={category}
+          showItems={true}
+        />
       ))}
 
-      {/*<ul>
-        {itemCards.map((item) => {
-          return (
-            <li key={item.card.info.id}>
-              {item.card.info.name} -{item.card.info.price / 100}
-            </li>
-          );
-        })}
-      </ul>*/}
+      {/*ItemList*/}
     </div>
   );
 };
