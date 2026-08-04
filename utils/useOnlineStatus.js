@@ -17,7 +17,7 @@ const useOnlineStatus = () => {
       window.removeEventListener("offline", handleOffline);
     };
   }, []);
-  //check if online
+
   return onlineStatus;
 };
 export default useOnlineStatus;
