@@ -87,6 +87,7 @@ A production-ready React web application engineered with modern front-end engine
         npx jest --coverage
    ```
 
+```text
 Directory Structure
 ├── src/
 │ ├── components/
@@ -102,3 +103,4 @@ Directory Structure
 ├── .gitignore
 ├── package.json # Project metadata, dependencies, and build scripts
 └── babel.config.js # Babel transformations for Jest and JSX
+```
