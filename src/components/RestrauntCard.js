@@ -15,6 +15,14 @@ const RestaurantCard = (props) => {
           className="w-full h-full object-cover rounded-2xl"
           alt="res-logo"
           src={CDN_URL + cloudinaryImageId}
+          onError={(e) => {
+            // 1. Prevent infinite loop if fallback image also fails
+            e.target.onerror = null;
+
+            // 2. Direct DOM fallback replacement
+            e.target.src =
+              "https://media-assets.swiggy.com/swiggy/image/upload/FOOD_CATALOG/IMAGES/CMS/2025/5/23/754c1beb-c413-4fc9-b141-d3680387b462_b553356f-7a27-477f-be6e-f6b9ec3a8bdb.jpg";
+          }}
         />
       </div>
 
