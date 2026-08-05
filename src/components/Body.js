@@ -3,6 +3,7 @@ import { useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useRestrauntList from "../../utils/useRestrauntList";
+import OfferBanner from "./OfferBanner";
 
 // Higher-Order Component instantiated outside render to avoid unnecessary re-creation
 const RestrauntCardVeg = withVegLabel(RestaurantCard);
@@ -45,6 +46,7 @@ const Body = () => {
 
   return (
     <main className="min-h-[85vh] bg-slate-50 py-8 px-4 sm:px-6 lg:px-8">
+      <OfferBanner />
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Controls Section: Search Bar & Filters */}
         <div className="bg-white p-4 sm:p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -137,7 +139,7 @@ const Body = () => {
           </div>
         ) : (
           /* Main Responsive Restaurant Grid */
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 w-full">
             {filteredRestraunts.map((restaurant) => (
               <Link
                 key={restaurant?.info?.id}

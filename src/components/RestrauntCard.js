@@ -9,7 +9,7 @@ const RestaurantCard = (props) => {
   return (
     <div
       data-testid="resCard"
-      className="m-4 p-3.5 w-72 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group grow min-w-[200px]"
+      className="w-full p-3.5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
     >
       {/* Image Container with aspect ratio & hover zoom */}
       <div className="relative w-full h-44 overflow-hidden rounded-xl bg-slate-100">

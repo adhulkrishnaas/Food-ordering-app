@@ -55,11 +55,6 @@ const RestrauntMenu = () => {
             <div className="flex items-center space-x-3 text-xs text-slate-500 pt-1">
               {areaName && <span>📍 {areaName}</span>}
               {sla?.slaString && <span>• 🚴 {sla.slaString}</span>}
-              {costForTwoMessage && (
-                <span className="font-semibold text-slate-700">
-                  • {costForTwoMessage}
-                </span>
-              )}
             </div>
           </div>
 

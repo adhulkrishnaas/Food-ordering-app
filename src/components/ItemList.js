@@ -22,7 +22,7 @@ const ItemList = ({ items }) => {
               <span className="font-bold">{item.card.info.name} </span>
               <span className="font-bold">
                 {" "}
-                - ₹ {item.card.info.price / 100}
+                - £ {item.card.info.price / 10000}
               </span>
             </div>
             <p className="text-xs">{item.card.info.description}</p>
