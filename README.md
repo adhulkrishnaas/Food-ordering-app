@@ -87,20 +87,36 @@ A production-ready React web application engineered with modern front-end engine
         npx jest --coverage
    ```
 
+## Directory Structure
+
 ```text
-Directory Structure
 ├── src/
-│ ├── components/
-│ │ ├── **tests**/ # Component unit and integration test specs
-│ │ ├── Header.js
-│ │ ├── RestaurantCard.js
-│ │ ├── Contact.js
-│ │ └── ...
-│ ├── utils/ # Custom hooks, Redux store, slices, and context
-│ ├── App.js # Main layout and client-side router configuration
-│ ├── index.html # Parcel entry point
-│ └── index.css # Tailwind directive configuration
+│   ├── components/
+│   │   ├── __tests__/           # Component unit & integration tests
+│   │   ├── About.js
+│   │   ├── Body.js
+│   │   ├── Contact.js
+│   │   ├── Header.js
+│   │   ├── ItemList.js
+│   │   ├── RestaurantCategory.js
+│   │   ├── RestaurantMenu.js
+│   │   ├── RestrauntCard.js
+│   │   ├── Shimmer.js
+│   │   └── UserClass.js
+│   ├── utils/
+│   │   ├── appStore.js          # Redux Toolkit store setup
+│   │   ├── cartSlice.js         # Cart state slice
+│   │   ├── constants.js         # API endpoints & asset URLs
+│   │   ├── mockData.js          # Mock API payload for testing
+│   │   ├── UserContext.js       # React Context instance
+│   │   ├── useOnlineStatus.js   # Custom hook for network status
+│   │   └── useRestaurantMenu.js # Custom hook for menu data fetching
+│   ├── App.js                   # Root component & router layout
+│   ├── babel.config.js          # Babel config for Jest/React transformations
+│   ├── index.css                # Tailwind CSS directive configuration
+│   ├── index.html               # Parcel entry HTML point
+│   └── index.js                 # React DOM root render
 ├── .gitignore
-├── package.json # Project metadata, dependencies, and build scripts
-└── babel.config.js # Babel transformations for Jest and JSX
+├── package.json                 # Project dependencies & build scripts
+└── README.md                    # Project documentation
 ```
