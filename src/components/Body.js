@@ -17,6 +17,7 @@ const Body = () => {
       <div className="filter m-4 p-4 flex items-center">
         <input
           type="text"
+          data-testid="searchInput"
           className="border border-solid border-black rounded-lg p-1.5"
           value={searchText}
           onChange={(e) => {

@@ -6,7 +6,10 @@ const RestaurantCard = (props) => {
   const { deliveryTime } = resData.info.sla;
 
   return (
-    <div className=" m-4 p-4 w-72 border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 bg-white grow min-w-[200px]">
+    <div
+      data-testid="resCard"
+      className=" m-4 p-4 w-72 border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 bg-white grow min-w-[200px]"
+    >
       <div className=" h-58 overflow-hidden">
         <img
           className="w-full h-full object-cover rounded-2xl"

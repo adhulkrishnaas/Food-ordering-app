@@ -11,14 +11,21 @@ const useRestrauntList = () => {
     const json = await data.json();
 
     setRestrauntLists(
-      json.data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
+      json?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants || [],
     );
     setFilteredRestraunts(
-      json.data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
+      json?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants || [],
     );
   };
 
-  return { restrauntLists, filteredRestraunts, setFilteredRestraunts };
+  return {
+    restrauntLists,
+    setRestrauntLists,
+    filteredRestraunts,
+    setFilteredRestraunts,
+  };
 };
 
 export default useRestrauntList;
