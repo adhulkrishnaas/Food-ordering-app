@@ -7,8 +7,12 @@ const useRestrauntList = () => {
     fetchData();
   }, []);
   const fetchData = async () => {
-    const data = await fetch("https://namastedev.com/api/v1/listRestaurants");
+    const data = await fetch(
+      "https://corsproxy.io?" +
+        encodeURIComponent("https://namastedev.com/api/v1/listRestaurants"),
+    );
     const json = await data.json();
+    console.log(json);
 
     setRestrauntLists(
       json?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
